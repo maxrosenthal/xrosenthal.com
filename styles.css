@@ -1,0 +1,95 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body and html to full height */
+html, body {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Animated breathing background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #0f2027, #203a43, #2a5298, #1e3c72);
+    background-size: 300% 300%;
+    animation: breathing 15s ease-in-out infinite;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Text styling */
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    max-width: 600px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+}
+
+/* Breathing animation */
+@keyframes breathing {
+    0% {
+        background-position: top;
+    }
+    50% {
+        background-position: bottom;
+    }
+    100% {
+        background-position: top;
+    }
+}
+
+/* Cross design styling */
+.cross {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.6fr;
+    grid-template-rows: 0.6fr 1fr 0.6fr;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 300px;
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #f0f0f0;
+    text-transform: none; /* Use lowercase letters */
+}
+
+.cross .m-vertical {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.cross .at {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.cross .x-horizontal {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: -6.8em;
+}
+
+.cross .m-horizontal {
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: -6.5em;
+}
+
+.cross .x-vertical {
+    grid-column: 2;
+    grid-row: 3;
+}
